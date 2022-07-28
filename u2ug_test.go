@@ -1,0 +1,83 @@
+package u2ug
+
+import (
+	"testing"
+
+	"github.com/google/uuid"
+)
+
+func TestGame(t *testing.T) {
+	tests := []struct {
+		uuid         string
+		expected     string
+		wantErr      bool
+		wantedErrMsg string
+	}{
+		{
+			uuid:         "incorrectUUID",
+			wantErr:      true,
+			wantedErrMsg: "invalid UUID length: 13",
+		},
+		{
+			uuid:         "77d54c74s7827a4967,9c20-c97c8a8b0e70", // incorrect UUID format
+			wantErr:      true,
+			wantedErrMsg: "invalid UUID format",
+		},
+		{
+			uuid:     "77d54c74-7827-4967-9c20-c97c8a8b0e70", // UUID v4
+			expected: "Odd Taxi 3",
+			wantErr:  false,
+		},
+		{
+			uuid:     "a496d62f-b0bc-4c58-96b9-ed838127d724",
+			expected: "Starving Action Euro Soccer 96", // UUID v4
+			wantErr:  false,
+		},
+		{
+			uuid:     "7937710f-81a8-4080-a5b9-da8c2ca42c47", // UUID v4
+			expected: "Fuzzy Battleship",
+			wantErr:  false,
+		},
+		{
+			uuid:     "b35c965e-0172-4ba5-9aba-da130e340c32", // UUID v1
+			expected: "Sleepy Bomberman",
+			wantErr:  false,
+		},
+		{
+			uuid:     "c19e1144-0e4d-11ed-861d-0242ac120002", // UUID v1
+			expected: "Tough Mega-Lo-Mania",
+			wantErr:  false,
+		},
+	}
+	for _, tt := range tests {
+		t.Run(tt.uuid, func(t *testing.T) {
+			game, err := Game(tt.uuid)
+			if err != nil {
+				if !tt.wantErr {
+					t.Errorf("Game() error = %v, wantErr %v", err, tt.wantErr)
+					return
+				}
+				if err.Error() != tt.wantedErrMsg {
+					t.Errorf("Game() errorMsg = %v, wantedErrMsg %v", err.Error(), tt.wantedErrMsg)
+				}
+			}
+			if game != tt.expected {
+				t.Errorf("Game() got = %v, expected %v", game, tt.expected)
+			}
+		})
+	}
+}
+
+func TestFuzzUUIDs(t *testing.T) {
+	for i := 0; i < 1000; i++ {
+		game, err := Game(uuid.NewString())
+		if err != nil {
+			t.Errorf("Game() error = %v", err)
+			return
+		}
+		if len(game) == 0 {
+			t.Errorf("Game() is empty = %v", game)
+			return
+		}
+	}
+}

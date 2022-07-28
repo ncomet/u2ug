@@ -1,0 +1,45 @@
+= UUID to Ubisoft Game (u2ug)
+:icons: font
+
+A Golang library that given a https://fr.wikipedia.org/wiki/Universally_unique_identifier[UUID] (v1 or v4), will return the concatenation of a random adjective and Ubisoft game.
+
+IMPORTANT: Highly inspired by https://github.com/CleverCloud/uuid_to_pokemon.rs, but in Go. Special thanks to the https://www.clever-cloud.com/[Clever Cloud] teams ;)
+
+It is an https://en.wikipedia.org/wiki/Injective_function[_injective function_], meaning that a given UUID will *always produce the same name*, but two names could be the output of the same UUID.
+
+It does should not matter since the original UUID must be kept as original source of uniqueness. This library is created in order to assign a reproducible human-readable name to a UUID.
+
+NOTE: Some examples
+
+|===
+|Messy Rocksmith+
+|Busy Beyond Good & Evil HD
+|Easy The Smurfs 3D
+|Fussy Rayman Legends: Definitive Edition
+|Glassy Broken Sword: Shadow of the Templars - The Director's Cut
+|Bashful Just Dance 2018
+|Good Tom Clancy's Rainbow Six 3
+|Fluttering Top Trumps: Horror & Predators
+|Nimble Rayman 3: Hoodlum Havoc
+|Rich E.T. The Extra-Terrestrial: Interplanetary Mission
+|Silly Top Trumps: Dogs & Dinosaurs
+|Tricky Cover Girl
+|Difficult Monster Jam: Maximum Destruction
+|Joyful Tom Clancy's Ghost Recon 2
+|Glowing Fighters Uncaged
+|Hardworking Street Racer
+|Cozy UFC: Throwdown
+|Clumsy Assassin's Creed Pirates
+|Meek Just Dance 4
+|Simple Conflict Zone
+|Dreadful Anne McCaffrey's Freedom: First Resistance
+|Long Trains & Trucks Tycoon
+|Brave Bomberman
+|Creepy Deep Fighter
+|Happy Rayman Raving Rabbids
+|Carefree Anno: Build an Empire
+|Loud Tom Clancy's H.A.W.X 2
+|Spiky Shadowbane
+|Great Teenage Mutant Ninja Turtles: Smash-Up
+|Difficult My Japanese Coach
+|===
