@@ -25,23 +25,47 @@ It is an https://en.wikipedia.org/wiki/Injective_function[_injective function_],
 
 It does should not matter since the original UUID must be kept as original source of uniqueness. This library is created in order to assign a reproducible human-readable name to a UUID.
 
-== How to use
+== How to use (library)
 
 [source,bash]
 ----
-go get github.com/ncomet/u2ug
+go get github.com/ncomet/u2ug/ubi
 ----
 
 [source,go]
 ----
-import "github.com/ncomet/u2ug"
+import "github.com/ncomet/u2ug/ubi"
 
-game, err := u2ug.Game("eae8aa0c-f1b3-4413-b140-b06dc1da3617")
+game, err := ubi.Game("eae8aa0c-f1b3-4413-b140-b06dc1da3617")
 if err != nil {
 	panic(err)
 }
 
 fmt.Println(game) // "Sturdy Rayman 3: Hoodlum Havoc"
+----
+
+== How to use (CLI)
+
+[source,bash]
+----
+$ go build .
+$ u2ug eae8aa0c-f1b3-4413-b140-b06dc1da3617
+Sturdy Rayman 3: Hoodlum Havoc
+----
+
+[source,bash]
+----
+$ go run ./ eae8aa0c-f1b3-4413-b140-b06dc1da3617
+Sturdy Rayman 3: Hoodlum Havoc
+----
+
+== How to use (Docker)
+
+[source,bash]
+----
+$ docker build -t u2ug .
+$ docker run u2ug eae8aa0c-f1b3-4413-b140-b06dc1da3617
+Sturdy Rayman 3: Hoodlum Havoc
 ----
 
 == Some examples

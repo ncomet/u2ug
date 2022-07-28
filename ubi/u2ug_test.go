@@ -1,4 +1,4 @@
-package u2ug
+package ubi
 
 import (
 	"testing"

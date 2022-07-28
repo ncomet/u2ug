@@ -1,5 +1,5 @@
-// Package u2ug holds the Game function that returns a random adjective and Ubisoft game name according to a UUID
-package u2ug
+// Package ubi holds the Game function that returns a random adjective and Ubisoft game name according to a UUID
+package ubi
 
 import (
 	"fmt"
