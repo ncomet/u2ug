@@ -9,16 +9,16 @@ import (
 
 const byteShift = 4
 
-// Game will return a random adjective and Ubisoft game name according to param srcUuid
+// Game will return a random adjective and Ubisoft game name according to param uuid
 // It is an injective function
 // error will be returned if UUID is not a valid UUID format, or is a random string
-func Game(srcUuid string) (string, error) {
-	uuid, err := ud.Parse(srcUuid)
+func Game(uuid string) (string, error) {
+	pUuid, err := ud.Parse(uuid)
 	if err != nil {
 		return "", err
 	}
-	aIndex := getIndex(uuid, 0) % uint64(len(adjectives))
-	gIndex := getIndex(uuid, 8) % uint64(len(games))
+	aIndex := getIndex(pUuid, 0) % uint64(len(adjectives))
+	gIndex := getIndex(pUuid, 8) % uint64(len(games))
 	return fmt.Sprintf("%s %s", adjectives[aIndex], games[gIndex]), nil
 }
 

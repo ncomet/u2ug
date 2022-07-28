@@ -1,4 +1,4 @@
-module github.com/ncomet/uuid2ubigame
+module github.com/ncomet/u2ug
 
 go 1.18
 

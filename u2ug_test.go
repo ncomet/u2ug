@@ -29,8 +29,8 @@ func TestGame(t *testing.T) {
 			wantErr:  false,
 		},
 		{
-			uuid:     "a496d62f-b0bc-4c58-96b9-ed838127d724",
-			expected: "Starving Action Euro Soccer 96", // UUID v4
+			uuid:     "a496d62f-b0bc-4c58-96b9-ed838127d724", // UUID v4
+			expected: "Starving Action Euro Soccer 96",
 			wantErr:  false,
 		},
 		{
@@ -39,13 +39,33 @@ func TestGame(t *testing.T) {
 			wantErr:  false,
 		},
 		{
-			uuid:     "b35c965e-0172-4ba5-9aba-da130e340c32", // UUID v1
+			uuid:     "b35c965e-0172-4ba5-9aba-da130e340c32", // UUID v4
 			expected: "Sleepy Bomberman",
 			wantErr:  false,
 		},
 		{
-			uuid:     "c19e1144-0e4d-11ed-861d-0242ac120002", // UUID v1
-			expected: "Tough Mega-Lo-Mania",
+			uuid:     "fa1f95b9-18f1-44c3-99c2-abd4462635a5", // UUID v4
+			expected: "Silly Eagle Flight",
+			wantErr:  false,
+		},
+		{
+			uuid:     "eae8aa0c-f1b3-4413-b140-b06dc1da3617", // UUID v4
+			expected: "Sturdy Rayman 3: Hoodlum Havoc",
+			wantErr:  false,
+		},
+		{
+			uuid:     "4a7dfcda-0e6d-11ed-861d-0242ac120002", // UUID v1
+			expected: "Selfish Mega-Lo-Mania",
+			wantErr:  false,
+		},
+		{
+			uuid:     "765aa5a6-0e6d-11ed-861d-0242ac120002", // UUID v1
+			expected: "Ugly Mega-Lo-Mania",
+			wantErr:  false,
+		},
+		{
+			uuid:     "839ee114-0e6d-11ed-861d-0242ac120002", // UUID v1
+			expected: "Fussy Mega-Lo-Mania",
 			wantErr:  false,
 		},
 	}

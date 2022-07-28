@@ -1,7 +1,8 @@
-= UUID to Ubisoft Game (u2ug)
-:icons: font
+= u2ug: UUID to Ubisoft Game
 
 A Golang library that given a https://fr.wikipedia.org/wiki/Universally_unique_identifier[UUID] (v1 or v4), will return the concatenation of a random adjective and Ubisoft game.
+
+== Disclaimer
 
 IMPORTANT: Highly inspired by https://github.com/CleverCloud/uuid_to_pokemon.rs, but in Go. Special thanks to the https://www.clever-cloud.com/[Clever Cloud] teams ;)
 
@@ -9,7 +10,23 @@ It is an https://en.wikipedia.org/wiki/Injective_function[_injective function_],
 
 It does should not matter since the original UUID must be kept as original source of uniqueness. This library is created in order to assign a reproducible human-readable name to a UUID.
 
-NOTE: Some examples
+== How to use
+
+`go get github.com/ncomet/u2ug`
+
+[source,go]
+----
+import "github.com/ncomet/u2ug"
+
+game, err := u2ug.Game("eae8aa0c-f1b3-4413-b140-b06dc1da3617")
+if err != nil {
+	panic(err)
+}
+
+fmt.Println(game) // "Sturdy Rayman 3: Hoodlum Havoc"
+----
+
+== Some examples
 
 |===
 |Messy Rocksmith+
