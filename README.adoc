@@ -1,4 +1,14 @@
 = u2ug: UUID to Ubisoft Game
+ifdef::env-github[]
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+endif::[]
+ifndef::env-github[]
+:icons: font
+endif::[]
 
 A Golang library that given a https://fr.wikipedia.org/wiki/Universally_unique_identifier[UUID] (v1 or v4), will return the concatenation of a random adjective and Ubisoft game.
 
