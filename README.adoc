@@ -14,6 +14,9 @@ image:https://github.com/ncomet/u2ug/actions/workflows/go.yml/badge.svg[Go,link=
 
 A Golang library that given a https://fr.wikipedia.org/wiki/Universally_unique_identifier[UUID] (v1 or v4), will return the concatenation of a random adjective and Ubisoft game.
 
+[quote]
+29b1f2fe-5e2c-48ab-8586-8acc953f694c -> Curly Far Cry 3: Blood Dragon
+
 == Disclaimer
 
 IMPORTANT: Highly inspired by https://github.com/CleverCloud/uuid_to_pokemon.rs, but in Go. Special thanks to the https://www.clever-cloud.com/[Clever Cloud] teams ;)
