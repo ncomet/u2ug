@@ -24,7 +24,10 @@ It does should not matter since the original UUID must be kept as original sourc
 
 == How to use
 
-`go get github.com/ncomet/u2ug`
+[source,bash]
+----
+go get github.com/ncomet/u2ug
+----
 
 [source,go]
 ----
