@@ -14,6 +14,11 @@ func TestGame(t *testing.T) {
 		wantedErrMsg string
 	}{
 		{
+			uuid:         "",
+			wantErr:      true,
+			wantedErrMsg: "invalid UUID length: 0",
+		},
+		{
 			uuid:         "incorrectUUID",
 			wantErr:      true,
 			wantedErrMsg: "invalid UUID length: 13",
