@@ -25,7 +25,9 @@ It is an https://en.wikipedia.org/wiki/Injective_function[_injective function_],
 
 It does should not matter since the original UUID must be kept as original source of uniqueness. This library is created in order to assign a reproducible human-readable name to a UUID.
 
-== How to use (library)
+== How to use
+
+=== Go library
 
 [source,bash]
 ----
@@ -44,12 +46,12 @@ if err != nil {
 fmt.Println(game) // "Selfish Space Junkies"
 ----
 
-== How to use (CLI)
+=== Binary
 
 [source,bash]
 ----
 $ go build .
-$ u2ug d3acc428-3172-457a-9447-6a22263ef6b3
+$ ./u2ug d3acc428-3172-457a-9447-6a22263ef6b3
 Selfish Space Junkies
 ----
 
@@ -59,7 +61,7 @@ $ go run ./ d3acc428-3172-457a-9447-6a22263ef6b3
 Selfish Space Junkies
 ----
 
-== How to use (Docker)
+=== Docker
 
 [source,bash]
 ----
@@ -92,82 +94,10 @@ Selfish Space Junkies
 |Tiny Warlords: Battlecry II
 |Shining Imagine: Babyz
 |Rich All Star Tennis '99
-|Creeping Payuta and the Ice God
-|Fluttering Skateball
-|Stinky Prince of Persia: Warrior Within HD
-|Rusty Maupiti Island
-|Sizzling Scott Pilgrim vs. the World: The Game
-|Rapid F1 Pole Position
-|Gentle Driver: Parallel Lines
-|Loud Family Feud: Decades
-|Icy Who Wants to Be a Millionaire: 1st Edition
-|Odd The Smurfs 3D
-|Silly Asphalt: Urban GT
-|Generous The Longest Journey
-|Moody Petz Beach
-|Greedy Tom Clancy's Ghost Recon Predator
-|Huge Babel Rising 3D
-|Nimble TrackMania 2: Stadium
-|Loud Trials Fusion
-|Plump Tom and Jerry in Fists of Furry
-|Still TrackMania 2: Stadium
-|Endless Assassin's Creed: Bloodlines
-|Endless Self-Defense Training Camp
-|Kind Assassin's Creed II
-|Dreadful Family Feud: 2010 Edition
-|Awful Petz: Hamsterz Superstarz
-|Silly Just Sing
-|Crispy Grandia
-|Smooth Cook Wars
-|Deep Just Dance 2
-|Greedy Dance on Broadway
-|Carefree Monopoly Plus
-|Endless Jade Cocoon 2
-|Curly Tork: Prehistoric Punk
-|Alert Totally Spies! 3: Secret Agents
-|Spoiled Imagine: My Restaurant
-|Scared Puppies 3D
-|Loyal Heroes Over Europe
-|Polite Final Fight
-|Generous Pirates of the Caribbean: The Legend of Jack Sparrow
-|Excited The Smurfs & Co: Spellbound
-|Excited Cob to the Rescue!
-|Shining Fighter Within
-|Crazy The Perfect General
-|Crabby Catz
-|Glassy Monster 4x4 3D
-|Creepy Imagine: Figure Skater
-|Stingy Battle of Giants: Mutant Insects
-|Starving Maupiti Island
-|Great Soul Blazer
-|Still Disney's Donald Duck: Goin' Quackers
-|Great Rocksmith: All-new 2014 Edition - Remastered
-|Cozy Trevor Chan's Capitalism II
-|Meek My Chinese Coach
-|Tiny Splinter Cell: Blacklist - Spider-Bot
-|Great Batman: Vengeance
-|Bored Jam Sessions
-|Hasty Kohan: Immortal Sovereigns
-|Quiet Toy Soldiers: War Chest
-|Shining Tokyo Xtreme Racer 2
-|Strict MotoHeroz
-|Muffled Michael Jackson: The Experience 3D
-|Hopeful Rayman Advance
-|Caring Rayman Fiesta Run
-|Rusty Tom Clancy's Ghost Recon: Jungle Storm
-|Small Chessmaster: The Art of Learning
-|Wonderful Jojo's Fashion Show: Design in a Dash!
-|Fantastic Tom Clancy's Ghost Recon: Desert Siege
-|Muffled Sven-Göran Eriksson's World Challenge
-|Rude Jake Power: Policeman
-|Angry Tom Clancy's Rainbow Six Vegas 2
-|Clever Anno 2205
-|Hideous Dragon Riders: Chronicles of Pern
-|Plump Conquest: Frontier Wars
-|Wild Who Wants to Be a Millionaire: 2nd Edition
-|Alert Arcatera: The Dark Brotherhood
 |===
 
 == Games list source
+
+All games were taken and de-duplicated from:
 
 https://en.wikipedia.org/wiki/List_of_Ubisoft_games
