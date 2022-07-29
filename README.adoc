@@ -15,7 +15,7 @@ image:https://github.com/ncomet/u2ug/actions/workflows/go.yml/badge.svg[Go,link=
 A Golang library that given a https://fr.wikipedia.org/wiki/Universally_unique_identifier[UUID] (v1 or v4), will return the concatenation of a random adjective and Ubisoft game.
 
 [quote]
-29b1f2fe-5e2c-48ab-8586-8acc953f694c -> Curly Far Cry 3: Blood Dragon
+c840005c-06f0-43af-a96f-77bf13fdc956 -> Crazy Rocksmith
 
 == Disclaimer
 
@@ -36,12 +36,12 @@ go get github.com/ncomet/u2ug/ubi
 ----
 import "github.com/ncomet/u2ug/ubi"
 
-game, err := ubi.Game("eae8aa0c-f1b3-4413-b140-b06dc1da3617")
+game, err := ubi.Game("d3acc428-3172-457a-9447-6a22263ef6b3")
 if err != nil {
 	panic(err)
 }
 
-fmt.Println(game) // "Sturdy Rayman 3: Hoodlum Havoc"
+fmt.Println(game) // "Selfish Space Junkies"
 ----
 
 == How to use (CLI)
@@ -49,14 +49,14 @@ fmt.Println(game) // "Sturdy Rayman 3: Hoodlum Havoc"
 [source,bash]
 ----
 $ go build .
-$ u2ug eae8aa0c-f1b3-4413-b140-b06dc1da3617
-Sturdy Rayman 3: Hoodlum Havoc
+$ u2ug d3acc428-3172-457a-9447-6a22263ef6b3
+Selfish Space Junkies
 ----
 
 [source,bash]
 ----
-$ go run ./ eae8aa0c-f1b3-4413-b140-b06dc1da3617
-Sturdy Rayman 3: Hoodlum Havoc
+$ go run ./ d3acc428-3172-457a-9447-6a22263ef6b3
+Selfish Space Junkies
 ----
 
 == How to use (Docker)
@@ -64,43 +64,108 @@ Sturdy Rayman 3: Hoodlum Havoc
 [source,bash]
 ----
 $ docker build -t u2ug .
-$ docker run u2ug eae8aa0c-f1b3-4413-b140-b06dc1da3617
-Sturdy Rayman 3: Hoodlum Havoc
+$ docker run u2ug d3acc428-3172-457a-9447-6a22263ef6b3
+Selfish Space Junkies
 ----
 
 == Some examples
 
 |===
-|Messy Rocksmith+
-|Busy Beyond Good & Evil HD
-|Easy The Smurfs 3D
-|Fussy Rayman Legends: Definitive Edition
-|Glassy Broken Sword: Shadow of the Templars - The Director's Cut
-|Bashful Just Dance 2018
-|Good Tom Clancy's Rainbow Six 3
-|Fluttering Top Trumps: Horror & Predators
-|Nimble Rayman 3: Hoodlum Havoc
-|Rich E.T. The Extra-Terrestrial: Interplanetary Mission
-|Silly Top Trumps: Dogs & Dinosaurs
-|Tricky Cover Girl
-|Difficult Monster Jam: Maximum Destruction
-|Joyful Tom Clancy's Ghost Recon 2
-|Glowing Fighters Uncaged
-|Hardworking Street Racer
-|Cozy UFC: Throwdown
-|Clumsy Assassin's Creed Pirates
-|Meek Just Dance 4
-|Simple Conflict Zone
-|Dreadful Anne McCaffrey's Freedom: First Resistance
-|Long Trains & Trucks Tycoon
-|Brave Bomberman
-|Creepy Deep Fighter
-|Happy Rayman Raving Rabbids
-|Carefree Anno: Build an Empire
-|Loud Tom Clancy's H.A.W.X 2
-|Spiky Shadowbane
-|Great Teenage Mutant Ninja Turtles: Smash-Up
-|Difficult My Japanese Coach
+|Polite Tom Clancy's Ghost Recon Advanced Warfighter
+|Dreadful Gunfighter II: Revenge of Jesse James
+|Shrill Cloudy with a Chance of Meatballs
+|Shrill Rocket: Robot on Wheels
+|Meek Assassin's Creed Origins
+|Caring Far Cry New Dawn
+|Scared Buck Bumble
+|Selfish Splinter Cell: Blacklist - Spider-Bot
+|Shining Petz: Bunnyz
+|Angry Seven Kingdoms II: The Fryhtan Wars
+|Odd ZombiU
+|Plush Super Bust-A-Move
+|Sleepy Tiger Woods PGA Tour Golf
+|Foul Adventures in Music with the Recorder
+|Cruel Heroes of Might and Magic V: Tribes of the East
+|Stingy Theocracy
+|Quiet Lost: Via Domus
+|Bored Skateball
+|Tiny Warlords: Battlecry II
+|Shining Imagine: Babyz
+|Rich All Star Tennis '99
+|Creeping Payuta and the Ice God
+|Fluttering Skateball
+|Stinky Prince of Persia: Warrior Within HD
+|Rusty Maupiti Island
+|Sizzling Scott Pilgrim vs. the World: The Game
+|Rapid F1 Pole Position
+|Gentle Driver: Parallel Lines
+|Loud Family Feud: Decades
+|Icy Who Wants to Be a Millionaire: 1st Edition
+|Odd The Smurfs 3D
+|Silly Asphalt: Urban GT
+|Generous The Longest Journey
+|Moody Petz Beach
+|Greedy Tom Clancy's Ghost Recon Predator
+|Huge Babel Rising 3D
+|Nimble TrackMania 2: Stadium
+|Loud Trials Fusion
+|Plump Tom and Jerry in Fists of Furry
+|Still TrackMania 2: Stadium
+|Endless Assassin's Creed: Bloodlines
+|Endless Self-Defense Training Camp
+|Kind Assassin's Creed II
+|Dreadful Family Feud: 2010 Edition
+|Awful Petz: Hamsterz Superstarz
+|Silly Just Sing
+|Crispy Grandia
+|Smooth Cook Wars
+|Deep Just Dance 2
+|Greedy Dance on Broadway
+|Carefree Monopoly Plus
+|Endless Jade Cocoon 2
+|Curly Tork: Prehistoric Punk
+|Alert Totally Spies! 3: Secret Agents
+|Spoiled Imagine: My Restaurant
+|Scared Puppies 3D
+|Loyal Heroes Over Europe
+|Polite Final Fight
+|Generous Pirates of the Caribbean: The Legend of Jack Sparrow
+|Excited The Smurfs & Co: Spellbound
+|Excited Cob to the Rescue!
+|Shining Fighter Within
+|Crazy The Perfect General
+|Crabby Catz
+|Glassy Monster 4x4 3D
+|Creepy Imagine: Figure Skater
+|Stingy Battle of Giants: Mutant Insects
+|Starving Maupiti Island
+|Great Soul Blazer
+|Still Disney's Donald Duck: Goin' Quackers
+|Great Rocksmith: All-new 2014 Edition - Remastered
+|Cozy Trevor Chan's Capitalism II
+|Meek My Chinese Coach
+|Tiny Splinter Cell: Blacklist - Spider-Bot
+|Great Batman: Vengeance
+|Bored Jam Sessions
+|Hasty Kohan: Immortal Sovereigns
+|Quiet Toy Soldiers: War Chest
+|Shining Tokyo Xtreme Racer 2
+|Strict MotoHeroz
+|Muffled Michael Jackson: The Experience 3D
+|Hopeful Rayman Advance
+|Caring Rayman Fiesta Run
+|Rusty Tom Clancy's Ghost Recon: Jungle Storm
+|Small Chessmaster: The Art of Learning
+|Wonderful Jojo's Fashion Show: Design in a Dash!
+|Fantastic Tom Clancy's Ghost Recon: Desert Siege
+|Muffled Sven-Göran Eriksson's World Challenge
+|Rude Jake Power: Policeman
+|Angry Tom Clancy's Rainbow Six Vegas 2
+|Clever Anno 2205
+|Hideous Dragon Riders: Chronicles of Pern
+|Plump Conquest: Frontier Wars
+|Wild Who Wants to Be a Millionaire: 2nd Edition
+|Alert Arcatera: The Dark Brotherhood
 |===
 
 == Games list source

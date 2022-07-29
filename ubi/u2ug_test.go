@@ -30,47 +30,47 @@ func TestGame(t *testing.T) {
 		},
 		{
 			uuid:     "77d54c74-7827-4967-9c20-c97c8a8b0e70", // UUID v4
-			expected: "Odd Taxi 3",
+			expected: "Odd Fatal Frame II: Crimson Butterfly",
 			wantErr:  false,
 		},
 		{
 			uuid:     "a496d62f-b0bc-4c58-96b9-ed838127d724", // UUID v4
-			expected: "Starving Action Euro Soccer 96",
+			expected: "Starving Curling 2006",
 			wantErr:  false,
 		},
 		{
 			uuid:     "7937710f-81a8-4080-a5b9-da8c2ca42c47", // UUID v4
-			expected: "Fuzzy Battleship",
+			expected: "Fuzzy Walt Disney's The Jungle Book: Mowgli's Wild Adventure",
 			wantErr:  false,
 		},
 		{
 			uuid:     "b35c965e-0172-4ba5-9aba-da130e340c32", // UUID v4
-			expected: "Sleepy Bomberman",
+			expected: "Sleepy Risk: Urban Assault",
 			wantErr:  false,
 		},
 		{
 			uuid:     "fa1f95b9-18f1-44c3-99c2-abd4462635a5", // UUID v4
-			expected: "Silly Eagle Flight",
+			expected: "Silly Imagine: Makeup Artist",
 			wantErr:  false,
 		},
 		{
 			uuid:     "eae8aa0c-f1b3-4413-b140-b06dc1da3617", // UUID v4
-			expected: "Sturdy Rayman 3: Hoodlum Havoc",
+			expected: "Sturdy Disney's Dinosaur",
 			wantErr:  false,
 		},
 		{
 			uuid:     "4a7dfcda-0e6d-11ed-861d-0242ac120002", // UUID v1
-			expected: "Selfish Mega-Lo-Mania",
+			expected: "Selfish Roller Champions",
 			wantErr:  false,
 		},
 		{
 			uuid:     "765aa5a6-0e6d-11ed-861d-0242ac120002", // UUID v1
-			expected: "Ugly Mega-Lo-Mania",
+			expected: "Ugly Roller Champions",
 			wantErr:  false,
 		},
 		{
 			uuid:     "839ee114-0e6d-11ed-861d-0242ac120002", // UUID v1
-			expected: "Fussy Mega-Lo-Mania",
+			expected: "Fussy Roller Champions",
 			wantErr:  false,
 		},
 	}

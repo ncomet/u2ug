@@ -10,7 +10,7 @@ import (
 func main() {
 	if len(os.Args) < 2 {
 		fmt.Println("expecting UUID argument, usage:")
-		fmt.Println("	u2ug a496d62f-b0bc-4c58-96b9-ed838127d724")
+		fmt.Println("u2ug a496d62f-b0bc-4c58-96b9-ed838127d724")
 		fmt.Println("exiting")
 		os.Exit(1)
 	}
