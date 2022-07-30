@@ -1,4 +1,4 @@
-= u2ug: UUID to Ubisoft
+= u2ug: UUID to Ubisoft game
 ifdef::env-github[]
 :tip-caption: :bulb:
 :note-caption: :information_source:
