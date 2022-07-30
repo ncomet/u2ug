@@ -595,7 +595,7 @@ var wdCharacters = []string{
 	"Angelo Tucci",
 	"Anton Chenkov",
 	"Arvid Stegman",
-	"Bedbug's grandmother",
+	"Bedbug",
 	"Candy Amos",
 	"Carl Breenwood",
 	"Charlotte Gardner",
