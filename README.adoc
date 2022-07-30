@@ -44,6 +44,13 @@ if err != nil {
 }
 
 fmt.Println(game) // "Selfish Space Junkies"
+
+character, err := ubi.Character("d3acc428-3172-457a-9447-6a22263ef6b3")
+if err != nil {
+	panic(err)
+}
+
+fmt.Println(character) // "Selfish Selena"
 ----
 
 === Binary
@@ -51,14 +58,19 @@ fmt.Println(game) // "Selfish Space Junkies"
 [source,bash]
 ----
 $ go build .
-$ ./u2ug d3acc428-3172-457a-9447-6a22263ef6b3
+$ ./u2ug game d3acc428-3172-457a-9447-6a22263ef6b3
 Selfish Space Junkies
+$ ./u2ug character d3acc428-3172-457a-9447-6a22263ef6b3
+Selfish Selena
 ----
+
 
 [source,bash]
 ----
-$ go run ./ d3acc428-3172-457a-9447-6a22263ef6b3
+$ go run ./ game d3acc428-3172-457a-9447-6a22263ef6b3
 Selfish Space Junkies
+$ go run ./ character d3acc428-3172-457a-9447-6a22263ef6b3
+Selfish Selena
 ----
 
 === Docker
@@ -66,12 +78,13 @@ Selfish Space Junkies
 [source,bash]
 ----
 $ docker build -t u2ug .
-$ docker run u2ug d3acc428-3172-457a-9447-6a22263ef6b3
+$ docker run u2ug game d3acc428-3172-457a-9447-6a22263ef6b3
 Selfish Space Junkies
 ----
 
 == Some examples
 
+=== Games
 |===
 |Polite Tom Clancy's Ghost Recon Advanced Warfighter
 |Dreadful Gunfighter II: Revenge of Jesse James
@@ -96,8 +109,33 @@ Selfish Space Junkies
 |Rich All Star Tennis '99
 |===
 
+=== Characters
+
+|===
+|Soaring Tus
+|Fussy Eivor
+|Thrifty Amaru
+|Afraid Barr-Barr
+|Chilly Mo
+|Creeping Thant
+|Sloppy Teen Punk
+|Caring Nikolai Andreievich Orelov
+|Stingy Princess
+|Generous Hytham
+|Rapid Glaz
+|Grimy Sigurd
+|Cowardly Straker
+|Bashful Tiva
+|Generous Amaru
+|Kind Clancy
+|Hard Piquedram
+|===
 == Games list source
 
 All games were taken and de-duplicated from:
 
 https://en.wikipedia.org/wiki/List_of_Ubisoft_games
+
+== Characters list source
+
+Extracted from various dedicated game wiki fandom websites.
