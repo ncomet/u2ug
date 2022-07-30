@@ -1,6 +1,6 @@
 package ubi
 
-var characters = []string{}
+var characters []string
 
 func init() {
 	var ubiCharacters = [][]string{
@@ -12,7 +12,7 @@ func init() {
 		heroesOfMightAndMagicCharacters,
 		bgeCharacters,
 		grCharacters,
-		spliterCellCharacters,
+		splinterCellCharacters,
 		wdCharacters,
 	}
 	for _, chars := range ubiCharacters {
@@ -551,7 +551,7 @@ var grCharacters = []string{
 	"Karen Bowman",
 }
 
-var spliterCellCharacters = []string{
+var splinterCellCharacters = []string{
 	"Andrei V. Alekseevich",
 	"Bagrat",
 	"John Baxter",

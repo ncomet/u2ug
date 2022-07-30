@@ -1,4 +1,4 @@
-= u2ug: UUID to Ubisoft Game
+= u2ug: UUID to Ubisoft
 ifdef::env-github[]
 :tip-caption: :bulb:
 :note-caption: :information_source:
@@ -12,7 +12,7 @@ endif::[]
 
 image:https://github.com/ncomet/u2ug/actions/workflows/go.yml/badge.svg[Go,link=https://github.com/ncomet/u2ug/actions/workflows/go.yml]
 
-A Golang library that given a https://fr.wikipedia.org/wiki/Universally_unique_identifier[UUID] (v1 or v4), will return the concatenation of a random adjective and Ubisoft game.
+A Golang library that given a https://fr.wikipedia.org/wiki/Universally_unique_identifier[UUID] (v1 or v4), will return the concatenation of a random adjective and Ubisoft game, or character.
 
 [quote]
 c840005c-06f0-43af-a96f-77bf13fdc956 -> Crazy Rocksmith
