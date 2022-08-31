@@ -1,3 +1,5 @@
+name: Release JS WASM
+
 on:
   release:
     types: [created]
