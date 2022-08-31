@@ -16,3 +16,4 @@ jobs:
           goos: js
           goarch: wasm
           binary_name: u2ug.wasm
+          compress_assets: false
