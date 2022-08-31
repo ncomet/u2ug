@@ -6,7 +6,7 @@ on:
 
 jobs:
   release-js-wasm:
-    name: release linux/amd64
+    name: release js/wasm
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
