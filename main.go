@@ -1,3 +1,5 @@
+//go:build !wasm
+
 package main
 
 import (
@@ -6,11 +8,6 @@ import (
 	"os"
 
 	"github.com/ncomet/u2ug/ubi"
-)
-
-var (
-	game      = flag.NewFlagSet("game", flag.ExitOnError)
-	character = flag.NewFlagSet("character", flag.ExitOnError)
 )
 
 func main() {

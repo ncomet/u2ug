@@ -82,6 +82,49 @@ $ docker run u2ug game d3acc428-3172-457a-9447-6a22263ef6b3
 Selfish Space Junkies
 ----
 
+=== WASM
+
+Build the `wasm` version:
+
+[source,bash]
+----
+GOOS=js GOARCH=wasm go build -o u2ug.wasm
+cp "$(go env GOROOT)/misc/wasm/wasm_exec.js" .
+----
+
+Then use it in your webapp:
+
+[source,html]
+----
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <script src="wasm_exec.js"></script>
+    <script>
+        const go = new Go();
+        WebAssembly.instantiateStreaming(fetch("u2ug.wasm"), go.importObject).then((result) => {
+            go.run(result.instance);
+        });
+
+        // call the functions available in window.ubiGame or window.ubiCharacter
+        document.body.textContent = ubiGame("c74c3694-8040-4213-8a46-988ee9a42ef3");
+    </script>
+</head>
+<body>
+</body>
+</html>
+----
+
+You can run an example avaible in `/wasm_example`:
+
+[source,bash]
+----
+GOOS=js GOARCH=wasm go build -o ./wasm_example/u2ug.wasm
+cp "$(go env GOROOT)/misc/wasm/wasm_exec.js" ./wasm_example
+----
+
+NOTE: Serve the `index.html` in your favorite tool to avoid CORS errors
+
 == Some examples
 
 === Games

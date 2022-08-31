@@ -1,0 +1,36 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <script src="wasm_exec.js"></script>
+    <script>
+        const go = new Go();
+        WebAssembly.instantiateStreaming(fetch("u2ug.wasm"), go.importObject).then((result) => {
+            go.run(result.instance);
+        });
+        function evalUuid(e) {
+            document.getElementById("game").value = ubiGame(e.value)
+            document.getElementById("character").value = ubiCharacter(e.value)
+        }
+    </script>
+</head>
+<body>
+<div>
+    <label>
+        UUID:
+        <input size="40" type="text" oninput="evalUuid(this)"/>
+    </label>
+</div>
+<div>
+    <label>
+        Game:
+        <input disabled id="game" size="50" type="text"/>
+    </label>
+</div>
+<div>
+    <label>
+        Character:
+        <input disabled id="character" size="50" type="text"/>
+    </label>
+</div>
+</body>
+</html>  
