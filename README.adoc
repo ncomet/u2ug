@@ -21,7 +21,7 @@ c840005c-06f0-43af-a96f-77bf13fdc956 -> Crazy Rocksmith
 
 IMPORTANT: Highly inspired by https://github.com/CleverCloud/uuid_to_pokemon.rs, but in Go. Special thanks to the https://www.clever-cloud.com/[Clever Cloud] teams ;)
 
-It is an https://en.wikipedia.org/wiki/Injective_function[_injective function_], meaning that a given UUID will *always produce the same name*, but a given name could be the output of two different UUIDs.
+It is *not* an https://en.wikipedia.org/wiki/Injective_function[_injective function_], meaning that a given UUID will *always produce the same name*, but a given name could be the output of two different UUIDs.
 
 It does should not matter since the original UUID must be kept as original source of uniqueness. This library is created in order to assign a reproducible human-readable name to a UUID.
 
